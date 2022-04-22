@@ -1035,8 +1035,7 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-    scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20, true);
-    scoreTxt.screenCenter(X);
+    scoreTxt = new FlxText(0, healthBarBG.y + 35, FlxG.width, "", 20, true);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, true);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.visible = !ClientPrefs.hideHud;
@@ -2324,7 +2323,7 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + ' | ' + '(' + ratingFC + ') ' + ratingName;
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + '(' + ratingFC + ') ' + ratingName;
 		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + ' | ' + '(' + ratingFC + ') ' + ratingName;
 		}
