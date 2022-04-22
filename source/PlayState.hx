@@ -1042,7 +1042,7 @@ class PlayState extends MusicBeatState
 		add(scoreTxt);
 		
 		//Watermarks Shits
-		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " - " + 'By I Dont Have Any Names#6450', 16);
+		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 60,0,SONG.song + " - " + 'By I Dont Have Any Names#6450', 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		add(kadeEngineWatermark);
@@ -2325,7 +2325,7 @@ class PlayState extends MusicBeatState
 		if(ratingName == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + '(' + ratingFC + ') ' + ratingName;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + ' | ' + '(' + ratingFC + ') ' + ratingName;
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + '(' + ratingFC + ') ' + ratingName;
 		}
 
 		if(botplayTxt.visible) {
