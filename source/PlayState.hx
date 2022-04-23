@@ -1038,11 +1038,12 @@ class PlayState extends MusicBeatState
     scoreTxt = new FlxText(0, healthBarBG.y + 35, FlxG.width, "", 20, true);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, true);
 		scoreTxt.scrollFactor.set();
+		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 		
 		//Watermarks Shits
-		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 55,0,SONG.song, 16);
+		kadeEngineWatermark = new FlxText(8,healthBarBG.y + 58,0,SONG.song + ' - By I dont have any names#6450', 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		add(kadeEngineWatermark);
@@ -3585,7 +3586,7 @@ class PlayState extends MusicBeatState
 							sortedNotesList.push(daNote);
 							//notesDatas.push(daNote.noteData);
 						}
-						canMiss = true;
+						canMiss = false;
 					}
 				});
 				sortedNotesList.sort((a, b) -> Std.int(a.strumTime - b.strumTime));
