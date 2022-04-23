@@ -12,6 +12,7 @@ class ClientPrefs {
 	public static var showFPS:Bool = #if android false #else true #end;
 	public static var flashing:Bool = true;
 	public static var globalAntialiasing:Bool = true;
+  public static var kadeEngineWatermark:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
 	public static var framerate:Int = 60;
@@ -95,6 +96,7 @@ class ClientPrefs {
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
+		FlxG.save.data.kadeEngineWatermark = kadeEngineWatermark;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
@@ -158,6 +160,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.lowQuality != null) {
 			lowQuality = FlxG.save.data.lowQuality;
+		}
+		if(FlxG.save.data.kadeEngineWatermark != null) {
+			kadeEngineWatermark = FlxG.save.data.kadeEngineWatermark;
 		}
 		if(FlxG.save.data.framerate != null) {
 			framerate = FlxG.save.data.framerate;
