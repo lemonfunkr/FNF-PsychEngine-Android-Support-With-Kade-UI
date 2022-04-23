@@ -1046,6 +1046,7 @@ class PlayState extends MusicBeatState
 		kadeEngineWatermark = new FlxText(5,healthBarBG.y + 58,0,SONG.song + ' - By I dont have any names#6450', 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
+		botplayTxt.visible = !ClientPrefs.kadeEngineWatermark;
 		add(kadeEngineWatermark);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
