@@ -62,6 +62,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool',
 			true);
 		addOption(option);
+		
+		var option:Option = new Option('Kade Watermark',
+			"If Checked, Add Watermark Like Kade (uncheck this if you play on a custom lua ui for a better experience)",
+			'kadeEngineWatermark',
+			'bool',
+			true);
+		addOption(option);
 
 		var option:Option = new Option('Camera Zooms',
 			"If unchecked, the camera won't zoom in on a beat hit.",
