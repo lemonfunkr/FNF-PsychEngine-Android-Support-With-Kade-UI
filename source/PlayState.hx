@@ -1046,6 +1046,7 @@ class PlayState extends MusicBeatState
 		kadeEngineWatermark = new FlxText(4, healthBarBG.y + 58, 0, SONG.song, 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
+		kadeEngineWatermark.borderSize = 1.25;
 		kadeEngineWatermark.visible = !ClientPrefs.kadeEngineWatermark;
 		add(kadeEngineWatermark);
 
