@@ -64,7 +64,7 @@ class VisualsUISubState extends BaseOptionsMenu
 		addOption(option);
 		
 		var option:Option = new Option('Kade Watermark',
-			"If Checked, Add Watermark Like Kade (uncheck this if you play on a custom lua ui for a better experience)",
+			"If unchecked, Add Watermark Like Kade (check this if you play on a custom lua ui for a better experience)",
 			'kadeEngineWatermark',
 			'bool',
 			true);
